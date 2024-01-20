@@ -14,3 +14,4 @@ function getVal() {
     })
     // console.log(text1.value)
 }
+
