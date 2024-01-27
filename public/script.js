@@ -1,6 +1,7 @@
 let usname = document.getElementById('usName')
 // console.log(text.innerHTML)
-let usAge = document.getElementById('usAge')
+let password = document.getElementById('usPassword')
+let email=document.getElementById('usEmail')
 // console.log(text1.value)
 // let bla= document.querySelector('p')
 function getVal() {
@@ -10,8 +11,7 @@ function getVal() {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ name: usname.value, age: usAge.value })
+        body: JSON.stringify({ name: usname.value, password: password.value, email: email.value })
     })
     // console.log(text1.value)
 }
-
