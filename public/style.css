@@ -1,0 +1,44 @@
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: rgb(48, 3, 3);}
+  }
+  @keyframes example1 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+body {
+  background-color: linen;
+}
+
+
+
+table tr td{
+ 
+    padding: 10px;
+    text-align: center;
+}
+.update{
+    background-color: green;
+  
+    padding: 5px;
+    width: 100px;
+    color: white;
+    position: relative;
+    animation-name: example1;
+    animation-duration: 5s;
+}
+.delete{
+    
+    width: 100px;
+  height: 100px;
+  padding: 5px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+    
+    padding: 5px;
+   
+}
