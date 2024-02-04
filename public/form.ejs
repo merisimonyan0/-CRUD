@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="parent" style="z-index: 2;">
+        <div class="container1">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>Update</td>
+                    <td>Delete</td>
+                </tr>
+                <% theatre.forEach(function(justOne) { %>
+                    <tr>
+                        <td>
+                            <%= justOne.name %>
+                        </td>
+                        <td>
+                            <%= justOne.price %>
+                        </td>
+                        <td><a class="update" href="update/<%= justOne._id %>">Update</a></td>
+                        <td><a class="delete" href="delete/<%= justOne._id %>">Delete</a></td>
+                    </tr>
+                    <% }); %>
+            </table>
+        </div>
+    </div>
+    <div class="parent">
+        <div class="container">
+                <form action="/addName" method="post">
+                    <input class ="input1"id="PrName" type="text" required name="name" placeholder="Name"><br><br>
+                    <input class ="input1"id="PrPrice" type="number" name="price" placeholder="Price"><br><br>
+                    <input class ="input1"id="PrImage" type="text" name="image" placeholder="Image"><br><br>
+                    <input class ="input1"id="PrUUID" type="number" name="uuid" placeholder="UUID"><br><br>
+                    <input class ="input1"id="PrDes" type="text" name="description" placeholder="Description"><br><br>
+                    <input class ="input1"id="id" type="hidden" name="id"><br><br>
+                    <input class ="input2"type="submit" onclick="getVal()">
+                </form>
+            </div>
+        </div>
 
-    <table>
-        <tr>
-            <td>Name</td>
-            <td>Price</td>
-            <td>Update</td>
-            <td>Delete</td>
-        </tr>
-         <% theatre.forEach(function(justOne) { %>
-        <tr>
-            <td><%= justOne.name %></td>
-            <td><%= justOne.price %></td>
-            <td><a class="update" href="update/<%= justOne._id %>">Update</a></td>
-            <td><a class="delete" href="delete/<%= justOne._id %>">Delete</a></td>
-        </tr>
-    <% }); %>
-    </table>
-    <form action="/addName" method="post">
-        <input id="PrName" type="text" required name="name" placeholder="Name"><br><br>
-        <input id="PrPrice" type="number" name="price" placeholder="Price"><br><br>
-        <input id="PrImage" type="text" name="image" placeholder="Image"><br><br>
-        <input id="PrUUID" type="number" name="uuid" placeholder="UUID"><br><br>
-        <input id="PrDes" type="text" name="description" placeholder="Description"><br><br>
-        <input id="id" type="hidden" name="id" ><br><br>
-        <input type="submit" onclick="getVal()" >
-    </form>
-
+    
     <script src="script.js"></script>
 </body>
+
 </html>

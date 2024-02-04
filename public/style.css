@@ -1,4 +1,4 @@
-@keyframes example {
+/* @keyframes example {
     from {background-color: red;}
     to {background-color: rgb(48, 3, 3);}
   }
@@ -8,9 +8,21 @@
     50%  {background-color:blue; left:200px; top:200px;}
     75%  {background-color:green; left:0px; top:200px;}
     100% {background-color:red; left:0px; top:0px;}
-  }
+  } */
 body {
   background-color: linen;
+}
+
+*{
+  margin: 0;
+	padding:0;
+	box-sizing:border-box;
+}
+	
+
+body{
+	overflow:hidden;
+	height:100%;
 }
 
 
@@ -26,9 +38,9 @@ table tr td{
     padding: 5px;
     width: 100px;
     color: white;
-    position: relative;
+    /* position: relative;
     animation-name: example1;
-    animation-duration: 5s;
+    animation-duration: 5s; */
 }
 .delete{
     
@@ -36,9 +48,63 @@ table tr td{
   height: 100px;
   padding: 5px;
   background-color: red;
-  animation-name: example;
-  animation-duration: 4s;
+  /* animation-name: example;
+  animation-duration: 4s; */
     
     padding: 5px;
    
+}
+
+
+.container {
+  background-color: rgb(0, 141, 40);
+
+  padding: 20px;
+  border: 4px solid black;
+  border-radius: 20px;
+  align-items: center;
+  margin-top: 100px;
+  position: relative;
+  top: 250px;
+}
+.container1 {
+  background-color: rgb(106, 104, 104);
+  padding: 40px;
+  border: 1px solid rgb(255, 242, 242);
+  border-radius: 20px;
+  align-items: center;
+  margin-top: 10px;
+}
+.input1{
+  width: 100%;
+  background-color: rgb(205, 233, 197);
+  border-radius: 20 px;
+  margin-right: 100px;
+}
+
+
+
+.input2{
+  width: 100%;
+  background-color: rgb(174, 255, 216);
+}
+
+.parent{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.form_update{
+  background-color: rgb(0, 141, 40);
+  margin: 0 auto;
+  padding: 20px;
+  border: 4px solid black;
+  border-radius: 20px;
+  align-items: center;
+  margin-top: 100px;
+  position: relative;
+  top: 250px;
+  position: absolute;
 }

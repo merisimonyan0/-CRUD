@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body style="
+display: flex;
+justify-content: center;
+">
 
     </table>
-    <form action="/updateData" method="post">
+    <form action="/updateData" method="post" class="form_update">
         <input id="PrName" type="text" required name="name" placeholder="Name" value = "<%= obj.name %>"><br><br>
         <input id="PrPrice" type="number" name="price" placeholder="Price" value = "<%= obj.price %>"><br><br>
         <input id="PrImage" type="text" name="image" placeholder="Image"  value = "<%= obj.image %>"><br><br>
@@ -17,5 +22,7 @@
         <input  type="hidden" name="id"   value = "<%= obj._id %>"><br><br>
         <input type="submit">
     </form>
+
+    <script src="/script.js"></script>
 </body>
-</html>
+</html> 
